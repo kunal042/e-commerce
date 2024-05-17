@@ -15,8 +15,8 @@ def sign_up(request):
         if password != confirm_password:
             messages.warning(request, "Password is Not macthing")
             return render(request, 'auth/signup.html')
-        
-        
+
+
 
         myuser = User.objects.create(email, password)
         myuser.save()
